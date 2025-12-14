@@ -19,4 +19,21 @@ def is_prime(number: int) -> bool:
 	return True
 
 
-def goldback_pairs
+def goldbach_pairs(number: int) -> list[tuple[int, int]]:
+	"""
+	Return all pairs of prime numbers whose equals 'number'.
+	This function is meaningful only for even numbers greater than 2.
+	"""
+	pairs = []
+
+	if number <= 2 or number % 2 != 0:
+		return pairs
+
+	# Only iterate up to number // 2 to avoid duplicate pairs
+	for first in range(2, number // 2 + 1):
+		second = number - first
+
+		if is_prime(first) and is_prime(second):
+			pairs.append(first, second)
+
+	return pairs
