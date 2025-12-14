@@ -61,7 +61,7 @@ def main() -> None:
 	if pairs:
 		print(f"\nPrime pairs whose sum is {number}:")
 		for p1, p2 in pairs:
-			print(f"{number} = {p1} + {p2}")
+			print(f"The number {number} equals the sum of {p1} and {p2}")
 	else:
 		print(f"No prime pairs found for {number}.")
 
