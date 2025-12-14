@@ -1,6 +1,3 @@
-from sqlalchemy import false
-
-
 def is_prime(number: int) -> bool:
 	"""
 	Check whether a number is prime.
