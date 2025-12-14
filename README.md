@@ -52,10 +52,6 @@ This project:
 ---
 
 ## 🧩 Project Structure
-
-
-
-🧩 Project Structure
 ```
 .
 ├── goldbach.py
