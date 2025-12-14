@@ -1,3 +1,6 @@
+from sqlalchemy import false
+
+
 def is_prime(number: int) -> bool:
 	"""
 	Check whether a number is prime.
@@ -7,3 +10,13 @@ def is_prime(number: int) -> bool:
 
 	if number < 2:
 		return False
+
+	# No need to check beyond sqrt(n)
+	for divisor in range(2, int(number ** 0.5) + 1):
+		if number % divisor == 0:
+			return False
+
+	return True
+
+
+def goldback_pairs
