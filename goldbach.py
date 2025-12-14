@@ -37,3 +37,31 @@ def goldbach_pairs(number: int) -> list[tuple[int, int]]:
 			pairs.append(first, second)
 
 	return pairs
+
+
+def main() -> None:
+	"""
+	Prompt the user for a number and display its Goldbach prime pairs.
+	"""
+	while True:
+		try:
+			number = int(input("Enter an even number greater than 2: "))
+			if number <= 2 or number % 2 != 0:
+				raise ValueError
+			break
+		except ValueError:
+			print("Invalid input. Please enter an even integer greater than 2.")
+
+	pairs = goldbach_pairs(number)
+
+	if pairs:
+		print(f"\nPrime pairs whose sum is {number}:")
+		for p1, p2 in pairs:
+			print(f"{number} = {p1} + {p2}")
+	else:
+		print(f"No prime pairs found for {number}.")
+
+
+if __name__ == "__main__":
+	main()
+
