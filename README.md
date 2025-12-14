@@ -166,3 +166,4 @@ Lina Chioma Anaso Software Engineering Student | Full-Stack Developer
 
 - GitHub: https://github.com/Chiomalina
 - LinkedIn: https://linkedin.com/in/lina-chioma-anaso
+- Youtube: https://www.youtube.com/channel/UCbE1QarH4aXYBLIFYEu4vrA
