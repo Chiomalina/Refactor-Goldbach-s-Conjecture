@@ -34,23 +34,27 @@ def goldbach_pairs(number: int) -> list[tuple[int, int]]:
 		second = number - first
 
 		if is_prime(first) and is_prime(second):
-			pairs.append(first, second)
+			pairs.append((first, second))
 
 	return pairs
 
 
-def main() -> None:
+def get_valid_integer() -> int:
 	"""
-	Prompt the user for a number and display its Goldbach prime pairs.
+	Keep asking the user for input until a valid integer is provided.
 	"""
 	while True:
 		try:
-			number = int(input("Enter an even number greater than 2: "))
-			if number <= 2 or number % 2 != 0:
-				raise ValueError
-			break
+			return int(input("Enter an even integer greater than 2: "))
 		except ValueError:
-			print("Invalid input. Please enter an even integer greater than 2.")
+			print("Error: please enter a valid integer.")
+
+
+def main() -> None:
+	"""
+	Main program loop.
+	"""
+	number = get_valid_integer()
 
 	pairs = goldbach_pairs(number)
 
